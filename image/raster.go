@@ -1,6 +1,8 @@
 package image
 
-import "fmt"
+import (
+	"fmt"
+)
 
 // Raster 点阵数据
 type Raster [][]float64
@@ -13,7 +15,7 @@ func (r Raster) Print() {
 }
 
 // Rasterize 返回图片点阵数组
-func Rasterize(c Content, checker ColorChecker) Raster {
+func Rasterize(c Content, checker Checker) Raster {
 
 	// 定义点阵数组
 	var r Raster
