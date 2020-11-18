@@ -19,7 +19,7 @@ const url = "{your-image-file}"
 
 func main() {
 	c := image.FromPath(url)
-	r := image.Rasterize(c, image.BlackChecker)
+	r := image.Rasterize(c, image.BlackChecker{})
 	r.Print()
 }
 
