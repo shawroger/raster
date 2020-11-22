@@ -1,5 +1,12 @@
+# raster
+
+`raster `是一个将图片转化为点阵的库
+
+有两个子 package，分别是 `raster/image` 与 `raster/util`
+
+
 # image
-`import "github.com\shawroger\raster\image"`
+`import "github.com/shawroger/raster/image"`
 
 * [Overview](#pkg-overview)
 * [Index](#pkg-index)
@@ -25,15 +32,8 @@
   * [func (r Raster) Print()](#Raster.Print)
 
 
-#### <a name="pkg-files">Package files</a>
-[color.go](/src/target/color.go) [file.go](/src/target/file.go) [raster.go](/src/target/raster.go)
 
-
-
-
-
-
-## <a name="BlackChecker">type</a> [BlackChecker](/src/target/color.go?s=174:200#L11)
+## <a name="BlackChecker">type</a> BlackChecker
 ``` go
 type BlackChecker struct{}
 
@@ -76,7 +76,7 @@ Weigh 黑色检查器实现接口 Checker.Weigh
 
 
 
-## <a name="Checker">type</a> [Checker](/src/target/color.go?s=42:137#L4)
+## <a name="Checker">type</a> Checker
 ``` go
 type Checker interface {
     Is(color Color) bool
@@ -95,7 +95,7 @@ Checker 检查颜色
 
 
 
-## <a name="Color">type</a> [Color](/src/target/file.go?s=233:250#L18)
+## <a name="Color">type</a> Color
 ``` go
 type Color [4]int
 ```
@@ -111,7 +111,7 @@ Color 像素颜色数组
 
 
 
-## <a name="ColorList">type</a> [ColorList](/src/target/file.go?s=328:352#L22)
+## <a name="ColorList">type</a> ColorList
 ``` go
 type ColorList [][]Color
 ```
@@ -136,7 +136,7 @@ Print 控制台输出 RGBA 数据
 
 
 
-## <a name="Content">type</a> [Content](/src/target/file.go?s=611:680#L37)
+## <a name="Content">type</a> Content
 ``` go
 type Content struct {
     Color  ColorList
@@ -156,14 +156,14 @@ Height 图片高度
 
 
 
-### <a name="From">func</a> [From](/src/target/file.go?s=712:744#L44)
+### <a name="From">func</a> From
 ``` go
 func From(file *os.File) Content
 ```
 From 读取图片信息
 
 
-### <a name="FromPath">func</a> [FromPath](/src/target/file.go?s=1389:1427#L74)
+### <a name="FromPath">func</a> FromPath
 ``` go
 func FromPath(filePath string) Content
 ```
@@ -173,7 +173,7 @@ FromPath 从路径直接读取图片信息
 
 
 
-## <a name="Raster">type</a> [Raster](/src/target/raster.go?s=64:87#L8)
+## <a name="Raster">type</a> Raster
 ``` go
 type Raster [][]float64
 ```
@@ -185,11 +185,13 @@ Raster 点阵数据
 
 
 
-### <a name="Rasterize">func</a> [Rasterize](/src/target/raster.go?s=256:305#L18)
+### <a name="Rasterize">func</a> Rasterize
 ``` go
 func Rasterize(c Content, checker Checker) Raster
 ```
 Rasterize 返回图片点阵数组
+
+
 
 
 
@@ -200,8 +202,9 @@ func (r Raster) Print()
 Print 控制台输出点阵数据
 
 
+ 
 # utils
-`import "E:\Software\gopath\src\github.com\shawroger\raster\utils"`
+`import "github.com/shawroger/raster/utils"`
 
 * [Overview](#pkg-overview)
 * [Index](#pkg-index)
@@ -214,15 +217,10 @@ Print 控制台输出点阵数据
 * [func DealError(err error)](#DealError)
 
 
-#### <a name="pkg-files">Package files</a>
-[common.go](/src/target/common.go)
-
-
-
-
-
-## <a name="DealError">func</a> [DealError](/src/target/common.go?s=66:91#L6)
+## <a name="DealError">func</a> DealError
 ``` go
 func DealError(err error)
 ```
 DealError 全局处理错误
+
+ 
