@@ -49,7 +49,7 @@ BlackChecker 黑色检查器
 
 
 
-### <a name="BlackChecker.Is">func</a> (BlackChecker) [Is](/src/target/color.go?s=250:292#L14)
+### <a name="BlackChecker.Is">func</a> (BlackChecker) Is 
 ``` go
 func (b BlackChecker) Is(color Color) bool
 ```
@@ -58,7 +58,7 @@ Is 黑色检查器实现接口 Checker.Is
 
 
 
-### <a name="BlackChecker.RGBA">func</a> (BlackChecker) [RGBA](/src/target/color.go?s=645:680#L37)
+### <a name="BlackChecker.RGBA">func</a> (BlackChecker) RGBA 
 ``` go
 func (b BlackChecker) RGBA() [4]int
 ```
@@ -67,7 +67,7 @@ RGBA 黑色检查器实现接口 Checker.RGBA
 
 
 
-### <a name="BlackChecker.Weigh">func</a> (BlackChecker) [Weigh](/src/target/color.go?s=475:523#L27)
+### <a name="BlackChecker.Weigh">func</a> (BlackChecker) Weigh 
 ``` go
 func (b BlackChecker) Weigh(color Color) float64
 ```
@@ -127,7 +127,7 @@ ColorList 像素颜色数组列表
 
 
 
-### <a name="ColorList.Print">func</a> (ColorList) [Print](/src/target/file.go?s=394:420#L25)
+### <a name="ColorList.Print">func</a> (ColorList) Print 
 ``` go
 func (c ColorList) Print()
 ```
@@ -195,7 +195,7 @@ Rasterize 返回图片点阵数组
 
 
 
-### <a name="Raster.Print">func</a> (Raster) [Print](/src/target/raster.go?s=129:152#L11)
+### <a name="Raster.Print">func</a> (Raster) Print
 ``` go
 func (r Raster) Print()
 ```
